@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:900|Raleway:500,700");
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: #121212; /* Un fondo oscuro y elegante */
+  color: #E6E8E6; /* Texto claro para contraste */
+  margin: 0px;
+  background-image: url("../img/nike.png"); 
+  background-size: 300px 400px;
+  background-position: right top;
+  background-repeat: repeat-y;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  padding: 12px 24px;
+  margin: 0px;
+  color: #FFD700; /* Dorado suave para un toque de lujo */
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 16px;
+  margin: 0px;
+  color: #FFD700; 
+}
+
+p {
+  padding: 8px 24px;
+  margin: 0px;
+  color: #C4C4C4; 
+}
+
+.sticker {
+  background-color: #FFD700; 
+  color: #121212; 
+  border-radius: 50%;
+  display: inline-block;
+  height: 90px;
+  width: 90px;
+  padding: 0;
+  margin: 0;
+  line-height: 90px;
+  text-align: center;
+  font-weight: bold;
+  position: absolute;
+  top: 1.5em;
+  right: 1.5em;
+}
