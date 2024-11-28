@@ -35,13 +35,8 @@ $totalInventoryValue = 0;
 $totalStock = 0;
 $totalTax = 0;
 
-// Cálculos de totales
-foreach ($books as $data) {
-    $totalInventoryValue += get_inventory_value($data['price'], $data['stock']);
-    $totalStock += $data['stock'];
-}
 $totalTax = calculate_tax($totalInventoryValue, $tax_rate);
-?>
+?> 
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -68,6 +63,7 @@ $totalTax = calculate_tax($totalInventoryValue, $tax_rate);
                 <td><?= number_format(get_inventory_value($data['price'], $data['stock']), 2) ?> €</td>
                 <td><?= number_format(calculate_tax(get_inventory_value($data['price'], $data['stock']), $tax_rate), 2) ?> €</td>
             </tr>
+            
         <?php endforeach; ?>
     </table>
 </body>
