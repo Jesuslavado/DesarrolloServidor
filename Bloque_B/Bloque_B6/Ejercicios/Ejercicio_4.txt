@@ -1,0 +1,21 @@
+Problemas para los usuarios:
+
+Robo de información sensible:
+Un atacante puede insertar un script malicioso para robar cookies, tokens de sesión, o datos confidenciales del usuario.
+
+Suplantación de identidad:
+Scripts maliciosos podrían solicitar al usuario datos sensibles como contraseñas o tarjetas de crédito mediante interfaces falsas.
+
+Descarga de malware:
+Los usuarios podrían ser engañados para descargar software malicioso desde enlaces en el contenido comprometido.
+
+Manipulación visual del contenido:
+Un atacante puede alterar la apariencia del sitio para engañar a los usuarios y redirigirlos a sitios de phishing.
+
+
+Problemas para el sitio web:
+Daño a la reputación:
+Si los usuarios sufren ataques en el sitio, se perderá confianza en la plataforma, afectando la marca y las visitas.
+
+Compromiso de la seguridad del sistema:
+Si el atacante logra ejecutar comandos o acceder a información crítica, puede comprometer servidores o bases de datos.
