@@ -87,7 +87,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <!-- MOSTRAR DATOS PROCESADOS -->
         <?php if ($_SERVER['REQUEST_METHOD'] === 'POST'): ?>
-        <pre><?php var_dump($datos); ?></pre>
+        <pre><?php var_dump($datos); ?></pre>     
         <?php endif; ?>
     </form>
     <?php include 'includes/footer.php'; ?>
+    <!-- EL EXAMEN CONSTA DE 3 FORMULARIOS UNO CON VALIDACIONES DEL GET, OTRO APRTADO CON EL POST Y OTRO CON SANEAMIENTO SIN EL POST, en el get sanear con htmlspecialschar-->
