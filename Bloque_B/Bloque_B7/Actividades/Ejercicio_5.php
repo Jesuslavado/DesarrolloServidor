@@ -32,11 +32,11 @@ function create_filename($filename, $upload_path) {
 }
 
 // Procesar el formulario cuando es enviado
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {  // Si el formulario ha sido enviado
+if ($_SERVER['REQUEST_METHOD'] == 'POST') { 
     // Verifica errores en la carga de archivos
     $error = ($_FILES['image']['error'] === 1) ? 'Archivo demasiado grande' : '';  
 
-    if ($_FILES['image']['error'] == 0) {  // Si no hubo errores en la carga
+    if ($_FILES['image']['error'] == 0) { 
         // Verifica que el tamaño del archivo sea adecuado
         $error .= ($_FILES['image']['size'] <= $max_size) ? '' : 'Archivo demasiado grande';  
         
@@ -48,11 +48,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {  // Si el formulario ha sido enviado
         $ext = strtolower(pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION));
         $error .= in_array($ext, $allowed_exts) ? '' : 'Extensión de archivo incorrecta';
 
-        // Si no hay errores, crea el nombre del archivo y mueve la imagen cargada
         if (!$error) {
-            $filename    = create_filename($_FILES['image']['name'], $upload_path);  // Genera un nombre único para el archivo
-            $destination = $upload_path . $filename;  // Ruta donde se guardará la imagen cargada
-            $thumbpath   = $upload_path . 'thumb_' . $filename;  // Ruta para guardar la miniatura
+            $filename    = create_filename($_FILES['image']['name'], $upload_path);  
+            $destination = $upload_path . $filename; 
+            $thumbpath   = $upload_path . 'thumb_' . $filename;  
 
             // Mueve el archivo a la carpeta de destino
             $moved = move_uploaded_file($_FILES['image']['tmp_name'], $destination);
@@ -63,17 +62,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {  // Si el formulario ha sido enviado
 
     // Si la imagen se movió y se redimensionó correctamente, mostrar la miniatura
     if ($moved === true and $resized === true) {
-        $message = 'Imagen cargada con éxito:<br><img src="uploads/thumb_' . $filename . '">';  // Mostrar miniatura
+        $message = 'Imagen cargada con éxito:<br><img src="uploads/thumb_' . $filename . '">';  
     } else {
-        $message = '<b>No se pudo cargar el archivo:</b> ' . $error;  // Mostrar mensaje de error
+        $message = '<b>No se pudo cargar el archivo:</b> ' . $error;  
     }
 }
 ?>
 
-<!-- Incluir encabezado de la página -->
 <?php include 'includes/header.php'; ?>  
 
-<!-- Mostrar mensaje (ya sea éxito o error) -->
 <?= $message ?>  
 
 <!-- Formulario de carga de archivos -->
@@ -83,5 +80,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {  // Si el formulario ha sido enviado
     <input type="submit" value="Subir">
 </form>
 
-<!-- Incluir pie de página -->
 <?php include 'includes/footer.php'; ?>  

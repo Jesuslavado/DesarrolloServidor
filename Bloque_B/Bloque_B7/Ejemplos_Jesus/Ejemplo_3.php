@@ -42,6 +42,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES['image'])) {
         echo "<h3>Error al mover la imagen.</h3>";
     }
 }
+
+ 
 ?>
 
 <!DOCTYPE html>
