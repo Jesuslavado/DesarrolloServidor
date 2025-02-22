@@ -2,7 +2,7 @@
 include 'includes/header.php'; 
 
 // Recibir la fecha de entrada
-$fecha_entrada = "16/10/2024 15:30:00"; // Ejemplo estático, cambiar por input dinámico si es necesario
+$fecha_entrada = "16/10/2024 15:30:00"; // Ejemplo, cambiar por input dinámico si es necesario
 
 // Convertir la fecha en un objeto DateTime
 $fecha_objeto = date_create_from_format('d/m/Y H:i:s', $fecha_entrada);
