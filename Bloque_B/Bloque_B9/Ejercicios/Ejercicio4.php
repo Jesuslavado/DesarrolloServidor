@@ -2,7 +2,7 @@
 include 'includes/sessions.php';
 
 if ($logged_in) { // Si ya ha iniciado sesión
-    header('Location: account.php'); // Redirigir a la cuenta
+    header('Location: Ejercicio4.php'); // Redirigir a la cuenta
     exit; // Detener la ejecución
 }
 
@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') { // Si el formulario es enviado
 
     if ($user_email == $email && $user_password == $password) { // Si los datos son correctos
         login(); // Iniciar sesión
-        header('Location: account.php'); // Redirigir a la cuenta
+        header('Location: Ejercicio4.php'); // Redirigir a la cuenta
         exit; // Detener la ejecución
     }
 }

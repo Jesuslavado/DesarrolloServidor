@@ -14,7 +14,7 @@ if (isset($_GET['agregar'])) {
     if (isset($productos[$id])) {
         $_SESSION['carrito'][$id] = ($_SESSION['carrito'][$id] ?? 0) + 1;
     }
-    header('Location: cart.php');
+    header('Location: ejercicio3.php');
     exit;
 }
 ?>
@@ -25,7 +25,7 @@ if (isset($_GET['agregar'])) {
 <ul>
     <?php foreach ($productos as $id => $producto): ?>
         <li>
-            <?= htmlspecialchars($producto['nombre']) ?> - $
+            <?= htmlspecialchars($producto['nombre']) ?> - €
             <?= number_format($producto['precio'], 2) ?>
             <a href="products.php?agregar=<?= $id; ?>">Añadir al carrito</a>
         </li>
